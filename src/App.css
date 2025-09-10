@@ -1,0 +1,58 @@
+nav {
+    background-color: var(--navbar-bg);
+}
+
+/* Apply page background and text color */
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    transition: all 0s ease;
+}
+
+/* Main content should push footer down */
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Dark/Light Mode Variables */
+
+/* Light Mode */
+body.light-mode {
+    --navbar-bg: #111827;
+    --navbar-text: #e5e7eb;
+    --navbar-accent: #facc15;
+    --navbar-hover-bg: #facc15;
+    --navbar-hover-text: #111827;
+
+    --footer-bg: #1f2937;
+    --footer-text: #e5e7eb;
+
+    --page-bg: #f5f7fa;
+    --text-color: #1f2933;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    --navbar-bg: #111827;
+    --navbar-text: #e5e7eb;
+    --navbar-accent: #facc15;
+    --navbar-hover-bg: #facc15;
+    --navbar-hover-text: #111827;
+
+    --footer-bg: #1f2937;
+    --footer-text: #e5e7eb;
+
+    --page-bg: #1e1e2f;
+    --text-color: #e5e7eb;
+}
+
+.footer {
+    background-color: var(--footer-bg);
+}
