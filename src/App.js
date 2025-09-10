@@ -3,7 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 // import Alert from "./components/Alert";
-// import Home from "./components/Home";
+import Home from "./components/Home";
 // import About from "./components/About";
 // import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
@@ -26,8 +26,8 @@ function App() {
                 {/* <Alert alert={alert} /> */}
                 <div className="container my-3 main-content">
                     <Routes>
-                        {/* <Route exact path="/" element={<Home />} />
-                        <Route exact path="/about" element={<About />} />
+                        <Route exact path="/" element={<Home />} />
+                        {/* <Route exact path="/about" element={<About />} />
                         <Route exact path="/skills" element={<Skills />} />
                         <Route exact path="/projects" element={<Projects />} />
                         <Route

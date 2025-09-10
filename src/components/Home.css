@@ -1,0 +1,153 @@
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 0;
+    margin: 0;
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+/* Two halves side by side */
+.home-left,
+.home-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Image fix */
+.home-left {
+    background: var(--page-bg);
+}
+
+.home-image {
+    width: 100%;
+    height: auto; /* maintain aspect ratio */
+    max-height: 100vh;
+    object-fit: contain; /* no cropping, full image visible */
+    border-radius: 2%;
+}
+
+/* Right half (text + button) */
+.home-right {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+/* Title */
+.intro-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+/* Typed effect text */
+.typed-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    min-width: 100%; /* keep space for longest string */
+    margin-left: 100px;
+}
+
+.intro-typed {
+    font-size: 1.5rem;
+    color: var(--navbar-accent);
+    min-height: 2rem;
+
+    display: inline-block; /* prevents shrinking issue */
+    text-align: left;
+}
+
+/* Projects button */
+.projects-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: var(--navbar-accent);
+    color: var(--navbar-hover-text);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+.projects-btn:hover {
+    background-color: var(--navbar-hover-bg);
+    color: var(--navbar-hover-text);
+    transform: scale(1.05);
+}
+
+/* Text colors for modes */
+.light-text {
+    color: #1f2933;
+}
+
+.dark-text {
+    color: #f9fafb;
+}
+
+.light-subtext {
+    color: #374151;
+}
+
+.dark-subtext {
+    color: #facc15;
+}
+
+/* Button colors for dark/light modes */
+.light-btn {
+    background-color: var(--navbar-accent);
+    color: var(--navbar-hover-text);
+}
+
+.dark-btn {
+    background-color: var(--navbar-accent);
+    color: var(--navbar-hover-text);
+}
+
+.light-btn:hover {
+    background-color: var(--navbar-hover-bg);
+    color: var(--navbar-hover-text);
+}
+
+.dark-btn:hover {
+    background-color: var(--navbar-hover-bg);
+    color: var(--navbar-hover-text);
+}
+
+/* Responsive for phone */
+@media (max-width: 768px) {
+    .home-container {
+        flex-direction: column; /* stack image + text */
+        min-height: auto;
+        padding: 10px;
+    }
+
+    /* Let sections size naturally on phone */
+    .home-left,
+    .home-right {
+        flex: unset;
+        width: 100%;
+        padding-left: 10px;
+    }
+
+    .home-image {
+        max-height: 40vh; /* smaller image on phone */
+    }
+
+    .intro-title {
+        font-size: 2rem;
+    }
+
+    .typed-wrapper {
+        margin-left: 0;
+    }
+
+    .intro-typed {
+        font-size: 1.2rem;
+    }
+}
