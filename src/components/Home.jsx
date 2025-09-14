@@ -11,6 +11,7 @@ export default function Home() {
     );
 
     useEffect(() => {
+        document.title = "Home";
         const observer = new MutationObserver(() => {
             setDarkMode(document.body.classList.contains("dark-mode"));
         });
@@ -50,8 +51,10 @@ export default function Home() {
                         strings={[
                             "🎓 Computer Science and Engineering Student",
                             "🌐 Interested in Building and Exploring Technology",
-                            "🧩 Solved over 2000 problems on Codeforces and LeetCode",
-                            "💻 a Competitive Programmer (Codeforces Pupil)",
+                            "🧩 Solved over 2000 problems on Codeforces",
+                            "💻 a Competitive Programmer (Codeforces <span style='color:" +
+                                (darkMode ? "#1aff5bff" : "#1fd100ff") +
+                                "'><b>Pupil</b></span>)",
                         ]}
                         typeSpeed={20}
                         backSpeed={20}

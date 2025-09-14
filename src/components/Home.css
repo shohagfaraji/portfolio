@@ -50,7 +50,7 @@
     display: flex;
     justify-content: flex-start;
     min-width: 100%; /* keep space for longest string */
-    margin-left: 100px;
+    margin-left: 40px;
 }
 
 .intro-typed {
