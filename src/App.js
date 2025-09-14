@@ -8,7 +8,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 // import Projects from "./components/Projects";
 // import Achievements from "./components/Achievements";
-// import Contact from "./components/Contact";
+import Contact from "./components/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
                             path="/achievements"
                             element={<Achievements />}
                         /> */}
-                        {/* <Route exact path="/contact" element={<Contact />} /> */}
+                        <Route exact path="/contact" element={<Contact />} />
                     </Routes>
                 </div>
                 <Footer />
