@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "./Navbar.css";
 import MoonIcon from "../assets/moon.png";
 import SunIcon from "../assets/sun.png";
@@ -17,19 +17,13 @@ export default function Navbar() {
         { name: "Contact", to: "/contact" },
     ];
 
-    // Toggle dark/light mode
     const toggleDarkMode = () => {
         setDarkMode(!darkMode);
     };
 
-    // Apply the dark/light class to body
     useEffect(() => {
-        document.body.classList.remove("dark-mode", "light-mode"); // remove any previous
-        if (darkMode) {
-            document.body.classList.add("dark-mode");
-        } else {
-            document.body.classList.add("light-mode");
-        }
+        document.body.classList.remove("dark-mode", "light-mode");
+        document.body.classList.add(darkMode ? "dark-mode" : "light-mode");
     }, [darkMode]);
 
     useEffect(() => {
@@ -40,7 +34,6 @@ export default function Navbar() {
             document.body.classList.add("light-mode");
         }
     }, []);
-
 
     return (
         <nav>
@@ -53,19 +46,24 @@ export default function Navbar() {
                 <ul className="nav-links">
                     {links.map((link) => (
                         <li key={link.name}>
-                            <Link to={link.to}>{link.name}</Link>
+                            <NavLink
+                                to={link.to}
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link active" : "nav-link"
+                                }
+                            >
+                                {link.name}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>
 
                 {/* Right-side buttons */}
                 <div className="nav-buttons">
-                    {/* Mobile menu button */}
                     <button className="menu-btn" onClick={() => setOpen(!open)}>
                         ☰
                     </button>
 
-                    {/* Dark/light mode toggle */}
                     <img
                         src={darkMode ? MoonIcon : SunIcon}
                         alt="Toggle Dark/Light"
@@ -80,9 +78,15 @@ export default function Navbar() {
                 <ul className="mobile-menu">
                     {links.map((link) => (
                         <li key={link.name}>
-                            <Link to={link.to} onClick={() => setOpen(false)}>
+                            <NavLink
+                                to={link.to}
+                                className={({ isActive }) =>
+                                    isActive ? "nav-link active" : "nav-link"
+                                }
+                                onClick={() => setOpen(false)}
+                            >
                                 {link.name}
-                            </Link>
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

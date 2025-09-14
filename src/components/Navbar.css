@@ -17,14 +17,31 @@
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    display: flex;
     color: var(--navbar-accent);
     text-decoration: none;
+    align-items: center;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
     gap: 25px;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-link.active {
+    background-color: rgb(255, 186, 11);
+    color: black;
+    border-radius: 6px;
 }
 
 .nav-links li a {
@@ -69,23 +86,6 @@
     transform: scale(1.1);
 }
 
-/* Mobile menu */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-    .menu-btn {
-        display: block;
-    }
-    .mobile-menu {
-        display: flex;
-        flex-direction: column;
-        padding: 15px 20px;
-        background-color: var(--navbar-bg);
-    }
-}
-
-/* Mobile menu link styles */
 .mobile-menu li a {
     list-style: none;
     display: inline-block;
@@ -100,4 +100,19 @@
 .mobile-menu li a:hover {
     background-color: var(--navbar-hover-bg);
     color: var(--navbar-hover-text);
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .mobile-menu {
+        display: flex;
+        flex-direction: column;
+        padding: 15px 20px;
+        background-color: var(--navbar-bg);
+    }
 }
