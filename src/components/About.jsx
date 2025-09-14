@@ -14,8 +14,6 @@ import uap_iucpc_host from "../assets/about/uap_iucpc_host.JPG";
 import batch from "../assets/about/batch.png";
 import stopstalk from "../assets/about/stopstalk.jpeg";
 import csheatmap2023 from "../assets/about/csheatmap2023.png";
-import traffic_system from "../assets/about/traffic_system.png";
-import traffic_system_circuit from "../assets/about/traffic_system_circuit.png";
 
 export default function About() {
     const [selectedCard, setSelectedCard] = useState(null);
@@ -120,15 +118,6 @@ export default function About() {
                 images: [club_president],
                 description:
                     "Served as the President of PCC, the most resourceful and active club at UAP. I had aspired to join the club since my first semester, and it was a rewarding experience to lead it in my 4.1 semester (earlier than the typical eligibility of 4.2). Despite being the first to hold this position before 4.2, I effectively collaborated with senior club leaders and ensured smooth coordination across multiple activities and events.",
-            },
-        },
-        {
-            title: "Best Hardware Project – Digital Logic & System Design Lab (Semester 2.2)",
-            image: traffic_system,
-            details: {
-                images: [traffic_system_circuit],
-                description:
-                    "This group project was recognized as the Best Hardware Project in the Digital Logic & System Design Lab course during Semester 2.2. The recognition reflected both the innovation and technical precision of our work. As a result, we received an A+ grade in the course.",
             },
         },
     ];
