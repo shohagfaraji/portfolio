@@ -7,7 +7,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
-// import Achievements from "./components/Achievements";
+import Achievements from "./components/Achievements";
 import Contact from "./components/Contact";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -63,7 +63,7 @@ function App() {
                                 <Projects theme={darkMode ? "dark" : "light"} />
                             }
                         />
-                        {/* <Route
+                        <Route
                             exact
                             path="/achievements"
                             element={
@@ -71,7 +71,7 @@ function App() {
                                     theme={darkMode ? "dark" : "light"}
                                 />
                             }
-                        /> */}
+                        />
                         <Route
                             exact
                             path="/contact"
