@@ -1,14 +1,10 @@
 :root {
-    --page-bg: #f0f4ff;
-    --card-bg: #ffffff;
     --skill-card-bg: #e6ebff;
-    --text-color: #1f2937;
     --accent-color: #1f4f7e;
 }
 
 .dark-mode {
-    --page-bg: #12122b;
-    --card-bg: #1e1e3a;
+    --page-bg: #2b1212;
     --skill-card-bg: #2a2a3f;
     --text-color: #f0f0f5;
     --accent-color: #facc15;

@@ -4,10 +4,8 @@ import "./Navbar.css";
 import MoonIcon from "../assets/moon.png";
 import SunIcon from "../assets/sun.png";
 
-export default function Navbar() {
+export default function Navbar({ darkMode, toggleDarkMode }) {
     const [open, setOpen] = useState(false);
-    const [darkMode, setDarkMode] = useState(false);
-
     const links = [
         { name: "Home", to: "/" },
         { name: "About", to: "/about" },
@@ -17,24 +15,6 @@ export default function Navbar() {
         { name: "Contact", to: "/contact" },
     ];
 
-    const toggleDarkMode = () => {
-        setDarkMode(!darkMode);
-    };
-
-    useEffect(() => {
-        document.body.classList.remove("dark-mode", "light-mode");
-        document.body.classList.add(darkMode ? "dark-mode" : "light-mode");
-    }, [darkMode]);
-
-    useEffect(() => {
-        if (
-            !document.body.classList.contains("dark-mode") &&
-            !document.body.classList.contains("light-mode")
-        ) {
-            document.body.classList.add("light-mode");
-        }
-    }, []);
-
     return (
         <nav>
             <div className="nav-container">
@@ -42,7 +22,6 @@ export default function Navbar() {
                     Shohag Faraji
                 </Link>
 
-                {/* Desktop Links */}
                 <ul className="nav-links">
                     {links.map((link) => (
                         <li key={link.name}>
@@ -58,12 +37,10 @@ export default function Navbar() {
                     ))}
                 </ul>
 
-                {/* Right-side buttons */}
                 <div className="nav-buttons">
                     <button className="menu-btn" onClick={() => setOpen(!open)}>
                         ☰
                     </button>
-
                     <img
                         src={darkMode ? MoonIcon : SunIcon}
                         alt="Toggle Dark/Light"
@@ -73,7 +50,6 @@ export default function Navbar() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             {open && (
                 <ul className="mobile-menu">
                     {links.map((link) => (

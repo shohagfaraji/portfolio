@@ -1,29 +1,12 @@
-nav {
-    background-color: var(--navbar-bg);
+:root {
+    --accent-color: #f59e0b;
+    --navbar-accent: #f59e0b;
+    --text-color: #1f2933;
+    --card-bg: #ffffff;
+    --card-inner: #f9fafb;
+    --modal-bg: #ffffff;
 }
 
-/* Apply page background and text color */
-body {
-    background-color: var(--page-bg);
-    color: var(--text-color);
-    transition: all 0s ease;
-}
-
-/* Main content should push footer down */
-.app-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-.main-content {
-    flex: 1;
-    padding: 20px;
-}
-
-/* Dark/Light Mode Variables */
-
-/* Light Mode */
 body.light-mode {
     --navbar-bg: #111827;
     --navbar-text: #e5e7eb;
@@ -36,9 +19,13 @@ body.light-mode {
 
     --page-bg: #f5f7fa;
     --text-color: #1f2933;
+
+    /* Card and Modal Colors */
+    --card-bg: #ffffff;
+    --card-inner: #e6ebff;
+    --modal-bg: #ffffff;
 }
 
-/* Dark Mode */
 body.dark-mode {
     --navbar-bg: #111827;
     --navbar-text: #e5e7eb;
@@ -51,8 +38,162 @@ body.dark-mode {
 
     --page-bg: #1e1e2f;
     --text-color: #e5e7eb;
+
+    /* Card and Modal Colors */
+    --card-bg: #1e1e3a;
+    --card-inner: #2a2a3f;
+    --modal-bg: #2b2b3d;
+}
+
+nav {
+    background-color: var(--navbar-bg);
+    color: var(--navbar-text);
+}
+
+body {
+    background-color: var(--page-bg);
+    color: var(--text-color);
+    transition: all 0s ease;
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
 }
 
 .footer {
     background-color: var(--footer-bg);
+    color: var(--footer-text);
+}
+
+.card {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    margin: 10px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-inner {
+    background-color: var(--card-inner);
+    padding: 15px;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background: var(--modal-bg);
+    color: var(--text-color);
+    padding: 24px;
+    border-radius: 12px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.25s ease-in-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-size: 28px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.modal-images img {
+    max-width: 100%;
+    border-radius: 8px;
+    object-fit: contain;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 600px) {
+    .card-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .card-buttons a {
+        width: 100%;
+    }
+
+    .about-list {
+        padding-left: 0;
+    }
+
+    .skills-row {
+        gap: 15px;
+    }
+    .skill-item {
+        width: 80px;
+    }
+    .skill-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skills-section h4 {
+        margin-left: 10px;
+    }
 }
