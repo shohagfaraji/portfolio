@@ -36,35 +36,30 @@ function App() {
                 <div className="container my-3 main-content">
                     <Routes>
                         <Route
-                            exact
                             path="/"
                             element={
                                 <Home theme={darkMode ? "dark" : "light"} />
                             }
                         />
                         <Route
-                            exact
                             path="/about"
                             element={
                                 <About theme={darkMode ? "dark" : "light"} />
                             }
                         />
                         <Route
-                            exact
                             path="/skills"
                             element={
                                 <Skills theme={darkMode ? "dark" : "light"} />
                             }
                         />
                         <Route
-                            exact
                             path="/projects"
                             element={
                                 <Projects theme={darkMode ? "dark" : "light"} />
                             }
                         />
                         <Route
-                            exact
                             path="/achievements"
                             element={
                                 <Achievements
@@ -73,7 +68,6 @@ function App() {
                             }
                         />
                         <Route
-                            exact
                             path="/contact"
                             element={
                                 <Contact theme={darkMode ? "dark" : "light"} />
