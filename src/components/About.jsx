@@ -27,7 +27,8 @@ export default function About() {
             title: "Eid Code Quest - UAP",
             banner: contestBannerDarkBG,
             contestLink: "https://toph.co/contests/training/hgnw43b",
-            pdfLink: "#",
+            pdfLink:
+                "https://drive.google.com/file/d/1RTM0SV6c8IvPb3NKoE_yfWyxFuXwkhNB/view?usp=sharing",
             details: {
                 images: [eid_code_quest_uap],
                 description:
@@ -38,7 +39,8 @@ export default function About() {
             title: "UAP Practice Contest",
             banner: contestBannerDarkBG,
             contestLink: "https://toph.co/contests/training/6whf2ve",
-            pdfLink: "#",
+            pdfLink:
+                "https://drive.google.com/file/d/1bnVTO-DcXi3hDfGlIK0RU8jQjuDYZ48O/view?usp=drive_link",
             details: {
                 images: [uap_practice_contest_2023],
                 description:
