@@ -31,8 +31,9 @@
 
 .items-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
     gap: 20px;
+    justify-content: center;
 }
 
 .achievement-card {
@@ -125,34 +126,33 @@
     max-height: 450px;
     object-fit: contain;
     border-radius: 12px;
-    background: #f9f9f9;
+    background: var(--card-bg);
 }
 
-.nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
-    border: none;
-    color: white;
-    font-size: 2rem;
+/* .modal-image-clickable {
+    position: relative;
     cursor: pointer;
-    padding: 6px 12px;
-    border-radius: 50%;
-    transition: background 0.2s ease;
 }
 
-.nav:hover {
-    background: rgba(0, 0, 0, 0.6);
+.modal-image-clickable::before,
+.modal-image-clickable::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
 }
 
-.nav.left {
-    left: 15px;
+.modal-image-clickable::before {
+    left: 0;
+    cursor: w-resize;
 }
 
-.nav.right {
-    right: 15px;
-}
+.modal-image-clickable::after {
+    right: 0;
+    cursor: e-resize;
+} */
+
 
 .dots {
     margin-top: 12px;
