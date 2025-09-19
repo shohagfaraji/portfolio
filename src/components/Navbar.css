@@ -9,9 +9,7 @@
     margin: 0;
     background-color: var(--navbar-bg);
     color: var(--navbar-text);
-    transition: all 0s ease;
-    background-color: var(--navbar-bg);
-    color: var(--navbar-text);
+    transition: all 0.3s ease;
 }
 
 .logo {
@@ -30,32 +28,42 @@
     margin: 0;
     padding: 0;
     align-items: center;
+    position: relative; /* important for highlight positioning */
 }
 
+/* moving highlight box */
+.nav-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    background: rgb(255, 186, 11); /* highlight color */
+    transition: all 0.3s ease; /* smooth animation */
+    z-index: 0; /* sits behind the links */
+}
+
+/* normal nav links */
 .nav-link {
     padding: 8px 16px;
     text-decoration: none;
-    color: white;
-}
-
-.nav-link.active {
-    background-color: rgb(255, 186, 11);
-    color: black;
-    border-radius: 6px;
-}
-
-.nav-links li a {
     color: var(--navbar-text);
-    text-decoration: none;
     font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 6px;
-    transition: all 0s;
+    position: relative; /* keeps text above highlight */
+    z-index: 1;
+    transition: color 0.2s ease;
 }
 
+/* active link text stays readable */
+.nav-link.active {
+    background: none;
+    color: var(--navbar-bg); /* accent instead of black */
+    font-weight: 600;
+}
+
+/* hover just changes text color */
 .nav-links li a:hover {
-    background-color: var(--navbar-hover-bg);
-    color: var(--navbar-hover-text);
+    background: none;
+    color: var(--navbar-hover-text, #fff); /* fallback to white */
 }
 
 .nav-buttons {
@@ -78,7 +86,7 @@
     height: 32px;
     border-radius: 50%;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .mode-toggle:hover {
@@ -94,7 +102,7 @@
     color: var(--navbar-text);
     font-weight: 500;
     border-radius: 6px;
-    transition: all 0s ease;
+    transition: all 0.2s ease;
 }
 
 .mobile-menu li a:hover {
