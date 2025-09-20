@@ -1,26 +1,32 @@
 :root {
-    --accent-color: #f59e0b;
-    --navbar-accent: #f59e0b;
+    --accent-color: #111827;
+    --navbar-accent: #111827;
     --text-color: #1f2933;
     --card-bg: #ffffff;
     --card-inner: #f9fafb;
     --modal-bg: #ffffff;
+
+    --skill-card-bg: #e6ebff;
+    --accent-color: #1f4f7e;
 }
 
 body.light-mode {
-    --navbar-bg: #111827;
+    --navbar-bg: #0056bf;
     --navbar-text: #e5e7eb;
-    --navbar-accent: #facc15;
-    --navbar-hover-bg: #facc15;
+    --navbar-accent: #0056bf;
+    --navbar-hover-bg: #f5f7fa;
     --navbar-hover-text: #111827;
+    --shohag-faraji: #e6ebff;
 
-    --footer-bg: #1f2937;
+    --heading-color: #0056bf;
+    --accent-color: #1f2933;
+
+    --footer-bg: #003270;
     --footer-text: #e5e7eb;
 
     --page-bg: #f5f7fa;
     --text-color: #1f2933;
 
-    /* Card and Modal Colors */
     --card-bg: #ffffff;
     --card-inner: #e6ebff;
     --modal-bg: #ffffff;
@@ -29,9 +35,13 @@ body.light-mode {
 body.dark-mode {
     --navbar-bg: #111827;
     --navbar-text: #e5e7eb;
-    --navbar-accent: #facc15;
-    --navbar-hover-bg: #facc15;
+    --navbar-accent: #15faaa;
+    --navbar-hover-bg: #15faaa;
     --navbar-hover-text: #111827;
+    --shohag-faraji: #15faaa;
+
+    --heading-color: #15faaa;
+    --accent-color: #facc15;
 
     --footer-bg: #1f2937;
     --footer-text: #e5e7eb;
@@ -39,7 +49,6 @@ body.dark-mode {
     --page-bg: #1e1e2f;
     --text-color: #e5e7eb;
 
-    /* Card and Modal Colors */
     --card-bg: #1e1e3a;
     --card-inner: #2a2a3f;
     --modal-bg: #2b2b3d;
@@ -67,26 +76,24 @@ body {
     padding: 20px;
 }
 
-/* Page transition classes */
 .page-enter {
-  opacity: 0;
-  transform: translateY(10px);
+    opacity: 0;
+    transform: translateY(10px);
 }
 .page-enter-active {
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms ease, transform 300ms ease;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 300ms ease, transform 300ms ease;
 }
 .page-exit {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 .page-exit-active {
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 300ms ease, transform 300ms ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 300ms ease, transform 300ms ease;
 }
-
 
 .footer {
     background-color: var(--footer-bg);

@@ -9,7 +9,7 @@
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 40px;
-    color: var(--navbar-accent);
+    color: var(--heading-color);
 }
 
 .category-card {
@@ -24,9 +24,9 @@
     font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 20px;
-    border-left: 5px solid var(--accent-color);
+    border-left: 5px solid var(--heading-color);
     padding-left: 10px;
-    color: var(--text-color);
+    color: var(--heading-color);
 }
 
 .items-grid {
@@ -87,13 +87,18 @@
     padding: 20px;
     text-align: center;
     animation: fadeIn 0.3s ease;
+    padding-top: 20px;
 }
 
 .modal-title {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 15px;
     color: var(--heading-color);
+    word-wrap: break-word;
+    white-space: normal;
+    padding-right: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
 .modal-description {
@@ -129,31 +134,6 @@
     background: var(--card-bg);
 }
 
-/* .modal-image-clickable {
-    position: relative;
-    cursor: pointer;
-}
-
-.modal-image-clickable::before,
-.modal-image-clickable::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 50%;
-}
-
-.modal-image-clickable::before {
-    left: 0;
-    cursor: w-resize;
-}
-
-.modal-image-clickable::after {
-    right: 0;
-    cursor: e-resize;
-} */
-
-
 .dots {
     margin-top: 12px;
     display: flex;
@@ -172,7 +152,7 @@
 }
 
 .dot.active {
-    background: var(--accent-color);
+    background: var(--heading-color);
 }
 
 @keyframes fadeIn {

@@ -88,12 +88,14 @@ export default function Projects({ theme }) {
                         className="modal-content"
                         onClick={(e) => e.stopPropagation()}
                     >
-                        <span className="close" onClick={closeModal}>
-                            &times;
-                        </span>
-                        <h3>
-                            <b>{selected.title}</b>
-                        </h3>
+                        <div className="modal-header">
+                            <h3>
+                                <b>{selected.title}</b>
+                            </h3>
+                            <span className="close" onClick={closeModal}>
+                                &times;
+                            </span>
+                        </div>
 
                         <img
                             src={

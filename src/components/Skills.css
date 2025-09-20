@@ -1,23 +1,16 @@
-:root {
-    --skill-card-bg: #e6ebff;
-    --accent-color: #1f4f7e;
-}
-
-.dark-mode {
-    --page-bg: #2b1212;
-    --skill-card-bg: #2a2a3f;
-    --text-color: #f0f0f5;
-    --accent-color: #facc15;
-}
-
-/* Full page container */
 .skills-page-container {
     background: var(--page-bg);
     padding: 50px 20px;
     min-height: 100vh;
 }
 
-/* Big card wrapping all skills */
+.dark-mode {
+    --page-bg: #2b1212;
+    --skill-card-bg: #2a2a3f;
+    --text-color: #f0f0f5;
+    --accent-color: #15faaa;
+}
+
 .skills-card {
     max-width: 1000px;
     margin: 0 auto;
@@ -30,12 +23,11 @@
     gap: 30px;
 }
 
-/* Skills section title */
 .skills-section-title {
     text-align: center;
     font-size: 1.8rem;
     margin-bottom: 25px;
-    color: var(--accent-color);
+    color: var(--heading-color);
     position: relative;
 }
 
@@ -44,12 +36,11 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--accent-color);
+    background: var(--heading-color);
     margin: 8px auto 0;
     border-radius: 2px;
 }
 
-/* Skills rows */
 .skills-section {
     display: flex;
     flex-direction: column;
@@ -64,7 +55,6 @@
     margin-bottom: 20px;
 }
 
-/* Individual skill cards */
 .skill-item {
     display: flex;
     flex-direction: column;
@@ -100,7 +90,6 @@
     color: var(--text-color);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .skill-item {
         width: 90px;
