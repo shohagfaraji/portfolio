@@ -1,8 +1,9 @@
 import { useState, useEffect, useRef } from "react";
 import { NavLink, Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
-import MoonIcon from "../assets/moon.png";
-import SunIcon from "../assets/sun.png";
+
+const MoonIcon = "https://i.postimg.cc/pTPw2Why/moon.png";
+const SunIcon = "https://i.postimg.cc/76qFxHG5/sun.png";
 
 export default function Navbar({ darkMode, toggleDarkMode }) {
     const [open, setOpen] = useState(false);

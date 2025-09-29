@@ -1,15 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Contact.css";
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
 
 export default function Contact() {
+    useEffect(() => {
+        document.title = "Contact";
+    }, []);
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
         subject: "",
         message: "",
     });
+
     const [sent, setSent] = useState(false);
 
     const handleChange = (e) => {

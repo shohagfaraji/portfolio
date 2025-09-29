@@ -1,19 +1,6 @@
 import "./About.css";
 import { useEffect, useState } from "react";
-
-import contestBannerDarkBG from "../assets/about/trophy_dark_mode.svg";
-import eid_code_quest_uap from "../assets/about/eid_code_quest_uap.png";
-import uap_practice_contest_2023 from "../assets/about/uap_practice_contest_2023.jpg";
-import upcoming_contest from "../assets/about/upcoming_contest.svg";
-
-import icpc_world_final from "../assets/about/icpc_world_final.jpg";
-import team_tokyo from "../assets/about/team_tokyo.png";
-import pcc_club_president from "../assets/about/pcc_club_president.png";
-import club_president from "../assets/about/club_president.jpg";
-import uap_iucpc_host from "../assets/about/uap_iucpc_host.JPG";
-import batch from "../assets/about/batch.png";
-import stopstalk from "../assets/about/stopstalk.jpeg";
-import csheatmap2023 from "../assets/about/csheatmap2023.png";
+import { ABOUT_IMAGES } from "../assets/about";
 
 export default function About() {
     const [selectedCard, setSelectedCard] = useState(null);
@@ -25,46 +12,46 @@ export default function About() {
     const pastContests = [
         {
             title: "Eid Code Quest - UAP",
-            banner: contestBannerDarkBG,
+            banner: ABOUT_IMAGES.trophy_dark_mode,
             contestLink: "https://toph.co/contests/training/hgnw43b",
             pdfLink:
                 "https://drive.google.com/file/d/1RTM0SV6c8IvPb3NKoE_yfWyxFuXwkhNB/view?usp=sharing",
             details: {
-                images: [eid_code_quest_uap],
+                images: [ABOUT_IMAGES.eid_code_quest_uap],
                 description:
                     "This was a festive contest organized during Eid, featuring original problems designed to test algorithmic thinking. The event was sponsored by varsity alumni, who contributed a generous cash prize, which was later distributed among all the participants.",
             },
         },
         {
             title: "UAP Practice Contest",
-            banner: contestBannerDarkBG,
+            banner: ABOUT_IMAGES.trophy_dark_mode,
             contestLink: "https://toph.co/contests/training/6whf2ve",
             pdfLink:
                 "https://drive.google.com/file/d/1bnVTO-DcXi3hDfGlIK0RU8jQjuDYZ48O/view?usp=drive_link",
             details: {
-                images: [uap_practice_contest_2023],
+                images: [ABOUT_IMAGES.uap_practice_contest_2023],
                 description:
                     "A practice contest to help juniors prepare for bigger competitions by solving original problems.",
             },
         },
         {
             title: "C++ STL: Level One",
-            banner: contestBannerDarkBG,
+            banner: ABOUT_IMAGES.trophy_dark_mode,
             contestLink: "https://toph.co/contests/training/4bzbbdk",
             pdfLink: "#",
             details: {
-                images: [upcoming_contest],
+                images: [ABOUT_IMAGES.upcoming_contest],
                 description:
                     "This contest focused on the built-in C++ STL data structures, covering more than 15 different types, to help participants sharpen their knowledge and implementation skills in C++ STL.",
             },
         },
         {
             title: "C++ STL: Level Zero",
-            banner: contestBannerDarkBG,
+            banner: ABOUT_IMAGES.trophy_dark_mode,
             contestLink: "https://toph.co/contests/training/geyf43k",
             pdfLink: "#",
             details: {
-                images: [upcoming_contest],
+                images: [ABOUT_IMAGES.upcoming_contest],
                 description:
                     "This contest focused on the built-in C++ STL data structures, covering more than 15 different types, with the goal of motivating and helping new programmers eager to learn C++ STL.",
             },
@@ -79,45 +66,45 @@ export default function About() {
                     Dhaka.
                 </>
             ),
-            image: icpc_world_final,
+            image: ABOUT_IMAGES.icpc_world_final,
             details: {
-                images: [team_tokyo],
+                images: [ABOUT_IMAGES.team_tokyo],
                 description:
                     "I had the honor of volunteering at the 45th ICPC World Finals, where I had the opportunity to interact with top programmers from around the world. In this picture, I am with the team from the University of Tokyo.",
             },
         },
         {
             title: "Event Coordinator, Inter-University Collaborative Programming Contest (IUCPC) 2023",
-            image: uap_iucpc_host,
+            image: ABOUT_IMAGES.uap_iucpc_host,
             details: {
-                images: [uap_iucpc_host],
+                images: [ABOUT_IMAGES.uap_iucpc_host],
                 description:
                     "Led the coordination of one of the largest programming contests held at UAP. Worked closely with a dedicated team to manage logistics, planning, and execution. The event was a great success, conducted seamlessly with no major issues, and received positive feedback from participants and faculty.",
             },
         },
         {
             title: "StopStalk Top Performer In Bangladesh",
-            image: batch,
+            image: ABOUT_IMAGES.batch,
             details: {
-                images: [stopstalk],
+                images: [ABOUT_IMAGES.stopstalk],
                 description:
                     "Recognized as a top performer on StopStalk for consistent problem solving across multiple platforms.",
             },
         },
         {
             title: "Codeforces Heatmap",
-            image: csheatmap2023,
+            image: ABOUT_IMAGES.csheatmap2023,
             details: {
-                images: [csheatmap2023],
+                images: [ABOUT_IMAGES.csheatmap2023],
                 description:
                     "A visual representation of my Codeforces participation, showcasing consistency and dedication.",
             },
         },
         {
             title: "President, UAP Programming Contest Club (PCC)",
-            image: pcc_club_president,
+            image: ABOUT_IMAGES.pcc_club_president,
             details: {
-                images: [club_president],
+                images: [ABOUT_IMAGES.club_president],
                 description:
                     "Served as the President of PCC, the most resourceful and active club at UAP. I had aspired to join the club since my first semester, and it was a rewarding experience to lead it in my 4.1 semester (earlier than the typical eligibility of 4.2). Despite being the first to hold this position before 4.2, I effectively collaborated with senior club leaders and ensured smooth coordination across multiple activities and events.",
             },
