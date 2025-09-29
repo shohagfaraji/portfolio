@@ -1,0 +1,37 @@
+export const ACHIEVEMENT_IMAGES = {
+    win1: "https://i.postimg.cc/Pq8sYJzf/win1.png",
+    win_2_1: "https://i.postimg.cc/mgkGZ8PM/win-2-1.jpg",
+    win_2_2: "https://i.postimg.cc/8zYg7Mvb/win_2_2.png",
+    win_3_1: "https://i.postimg.cc/htYRXTmN/win_3_1.png",
+    win_3_2: "https://i.postimg.cc/VkhPJntx/win_3_2.png",
+    win_3_3: "https://i.postimg.cc/HL7DXn0f/win_3_3.png",
+    win_3_4: "https://i.postimg.cc/6QGJnqVk/win_3_4.png",
+
+    buet_1: "https://i.postimg.cc/3RgsfqcV/buet-1.png",
+    kuet_1: "https://i.postimg.cc/v87y01R6/kuet-1.jpg",
+    uiu_1: "https://i.postimg.cc/hPpBqHPk/uiu-1.jpg",
+    uiu_2: "https://i.postimg.cc/c4XSNVLq/uiu-2.jpg",
+    aust_1: "https://i.postimg.cc/G2kWgf5Y/aust-1.jpg",
+    aust_2: "https://i.postimg.cc/Vvm3xRyc/aust-2.jpg",
+    duet_1: "https://i.postimg.cc/Qtp2Yzzr/duet-1.jpg",
+    duet_2: "https://i.postimg.cc/3NYPsBMN/duet-2.jpg",
+    uu_1: "https://i.postimg.cc/FsD4Q2Hh/uu-1.png",
+
+    oj_1_0: "https://i.postimg.cc/MZ0w9ckv/oj-1-0.png",
+    oj_1_1: "https://i.postimg.cc/8kdGZF8z/oj-1-1.png",
+    problem_count: "https://i.postimg.cc/TPWMg1qY/problem-count.png",
+
+    jrc_24_25_1: "https://i.postimg.cc/G3PRXB0t/jrc-24-25-1.png",
+    jrc_23_24_2: "https://i.postimg.cc/5ygZbC1k/jrc-23-24-2.jpg",
+    jrc_23_24: "https://i.postimg.cc/zv798g5g/jrc-23-24.png",
+    jrc_23_24_1: "https://i.postimg.cc/yxjwsZBX/jrc-23-24-1.jpg",
+    jrc_22_23_1: "https://i.postimg.cc/mkB0vwxD/jrc-22-23-1.png",
+    jrc_22_23_3: "https://i.postimg.cc/NFBW34h9/jrc-22-23-3.jpg",
+    jrc_22_23_2: "https://i.postimg.cc/tJpLK50q/jrc-22-23-2.jpg",
+    jrc_22_23_4: "https://i.postimg.cc/Rhdj4H9F/jrc-22-23-4.jpg",
+    vc_award: "https://i.postimg.cc/VkvcsDJf/vc-award.png",
+    dean_award: "https://i.postimg.cc/TwM89xCL/dean-award.png",
+
+    math_olympiad: "https://i.postimg.cc/rzXXhk89/math_olympiad.jpg",
+    chess: "https://i.postimg.cc/9M4CQ1zm/chess.png",
+};

@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 import "./Home.css";
-import LightImage from "../assets/coding_day.png";
-import DarkImage from "../assets/coding_night.png";
 import { useEffect, useState } from "react";
+
+const LightImage = "https://i.postimg.cc/hjMHvkTz/coding-day.png";
+const DarkImage = "https://i.postimg.cc/mDV0kvCt/coding-night.png";
 
 export default function Home() {
     const [darkMode, setDarkMode] = useState(
