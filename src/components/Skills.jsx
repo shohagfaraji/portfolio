@@ -58,7 +58,6 @@ export default function Skills() {
                             },
                             { src: javaLogo, alt: "Java", name: "Java" },
                             { src: pythonLogo, alt: "Python", name: "Python" },
-                            { src: sqlLogo, alt: "SQL", name: "SQL" },
                         ].map((skill) => (
                             <div className="skill-item" key={skill.name}>
                                 <img src={skill.src} alt={skill.alt} />
@@ -68,26 +67,34 @@ export default function Skills() {
                     </div>
 
                     {/** Frameworks */}
-                    <h3 className="skills-section-title">Frameworks</h3>
+                    <h3 className="skills-section-title">Web Technologies</h3>
                     <div className="skills-row">
                         {[
-                            {
-                                src: mongodbLogo,
-                                alt: "MongoDB",
-                                name: "MongoDB",
-                            },
+                            { src: reactLogo, alt: "React", name: "React" },
                             {
                                 src: expressjsLogo,
                                 alt: "ExpressJS",
                                 name: "ExpressJS",
                             },
-                            { src: reactLogo, alt: "React", name: "React" },
                             {
                                 src: nodejsLogo,
                                 alt: "Node.js",
                                 name: "Node.JS",
                             },
                             { src: djangoLogo, alt: "Django", name: "Django" },
+                            { src: htmlLogo, alt: "HTML", name: "HTML" },
+                            { src: cssLogo, alt: "CSS", name: "CSS" },
+                            {
+                                src: bootstrapLogo,
+                                alt: "Bootstrap",
+                                name: "Bootstrap",
+                            },
+                            {
+                                src: mongodbLogo,
+                                alt: "MongoDB",
+                                name: "MongoDB",
+                            },
+                            { src: sqlLogo, alt: "SQL", name: "SQL" },
                         ].map((skill) => (
                             <div className="skill-item" key={skill.name}>
                                 <img src={skill.src} alt={skill.alt} />
@@ -116,25 +123,6 @@ export default function Skills() {
                                 src: pycharmLogo,
                                 alt: "PyCharm",
                                 name: "PyCharm",
-                            },
-                        ].map((skill) => (
-                            <div className="skill-item" key={skill.name}>
-                                <img src={skill.src} alt={skill.alt} />
-                                <span>{skill.name}</span>
-                            </div>
-                        ))}
-                    </div>
-
-                    {/** Web Technologies */}
-                    <h3 className="skills-section-title">Web Technologies</h3>
-                    <div className="skills-row">
-                        {[
-                            { src: htmlLogo, alt: "HTML", name: "HTML" },
-                            { src: cssLogo, alt: "CSS", name: "CSS" },
-                            {
-                                src: bootstrapLogo,
-                                alt: "Bootstrap",
-                                name: "Bootstrap",
                             },
                         ].map((skill) => (
                             <div className="skill-item" key={skill.name}>
